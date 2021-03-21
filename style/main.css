@@ -1,0 +1,73 @@
+/* variáveis em css */
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+/* resetar estilos do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos gerais da página */
+body{
+    background: var(--preto);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* alinhamento de container com flexbox */
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* estilizando a logo */
+header .logo{
+    color: var(--vermelho);
+    font-size: 40px;
+    margin-left: 7px;
+}
+
+/* estilizando o menu de navegação */
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+/* animando o menu de navegação */
+header nav a:hover{
+    color: #fff;
+}
+
+/* estilizando a capa - Filme principal */
+.filme-principal{
+
+    /* imagem de fundo*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/capa-vikings.jpg');
+    background-size: cover;
+
+    /* tamanho alinhamento e disposição dos itens do container */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal p{
+    font-size: 16px;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+}
+
+.titulo{
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+}
