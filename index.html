@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
+    
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <title>NETFLIX</title>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <!-- owl carrosel css -->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
 </head>
 <body>
     <!-- Área superior do site com menu de navegação -->
     <header>
         <div class="container">
-            <h2 class="logo">NETFLIX</h2>
+            <a href="index.html" class="link-logo"><h2 class="logo">NETFLIX</h2></a>
             <nav>
                 <a href="#">Inicio</a>
                 <a href="#">Filmes</a>
@@ -43,8 +52,30 @@
         </div>
     </main>
 
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini01.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini02.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini03.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini04.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini05.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini06.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini07.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini08.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini09.jpg" ></div>
+            <div class="item"><img class="box-filmes" src="img/img-mini/mini10.jpg" ></div>
+        </div>
+        
+
+    </div>
+
     <!-- fonte awesome -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+
+    <!-- owl carrosel js -->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
 
 </body>
 </html>
