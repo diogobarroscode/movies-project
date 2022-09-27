@@ -52,7 +52,7 @@ header nav a:hover{
 .filme-principal{
 
     /* imagem de fundo*/
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/capa-vikings.jpg');
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('../img/capa-vikings.jpg');
     background-size: cover;
 
     /* tamanho alinhamento e disposição dos itens */
