@@ -1,0 +1,11 @@
+.container {
+    margin-top: 5rem;
+}
+
+.container-movie {
+    display: flex;
+    align-content: center;
+    gap: 1.4rem;
+    margin: 0 1rem;
+}
+

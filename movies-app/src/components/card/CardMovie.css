@@ -1,0 +1,12 @@
+.card-movie {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 12rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.card-movie img {
+    width: 12rem;
+}
