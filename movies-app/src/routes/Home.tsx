@@ -76,7 +76,6 @@ const Home = () => {
 
         <div className='container-movie'>
             {movies.length === 0 && <p>carregando...</p>}
-            {genres.length === 0 && <p></p>}
 
             {genres?.map((genre:any) =>
             <div className='container-genres' key={genre.id}>
