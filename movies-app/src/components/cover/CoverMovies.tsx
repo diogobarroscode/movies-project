@@ -7,7 +7,9 @@ const imgUrl = "https://image.tmdb.org/t/p/w1280/";
 const CoverMovie = ({movie}) => {
     return (
         <div className="cover-movie">
-            <img src={imgUrl + movie.backdrop_path} alt={movie.title} />
+            {<Link to={`/movie/${movie.id}`}>
+                <img src={imgUrl + movie.backdrop_path} alt={movie.title} />
+            </Link>}
         </div>
     )
 }

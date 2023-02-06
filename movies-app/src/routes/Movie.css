@@ -1,0 +1,18 @@
+.movie-page {
+    margin-top: 7rem;
+}
+
+.info-movie {
+    width: 70%;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.info-movie .card-movie {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.info-movie .card-movie img {
+    width: 65%;
+}

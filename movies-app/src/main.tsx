@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import Home from './routes/Home'
+import Movie from './routes/Movie'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
       },
+      {
+        path: 'movie/:id',
+        element: <Movie />
+      }
     ],
   },
 ])
