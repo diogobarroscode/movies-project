@@ -94,8 +94,8 @@ const Home = () => {
             {genres.length === 0 && <p></p>}
 
             {genres?.map((genre:any) =>
-            <div className='container-genres'>
-                <div className='genre-title' key={genre.id}>
+            <div className='container-genres' key={genre.id}>
+                <div className='genre-title'>
                   <h2>{genre.name}</h2>
                 </div>
                 <div className='container-movie-genre'>

@@ -10,3 +10,7 @@
 .card-movie img {
     width: 12rem;
 }
+
+.card-movie h2 {
+    display: none;
+}
