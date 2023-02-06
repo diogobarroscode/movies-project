@@ -6,7 +6,6 @@ import CoverMovie from '../components/cover/CoverMovies';
 
 const apiKey = "api_key=aa412de9cb6448a62e521ae48ef4817d";
 const baseUrl = "https://api.themoviedb.org/3/movie/";
-const imgUrl = "https://image.tmdb.org/t/p/w500/";
 const genresList = "https://api.themoviedb.org/3/genre/movie/list?";
 const movieGenre = "https://api.themoviedb.org/3/discover/movie?";
 
@@ -23,7 +22,7 @@ const Home = () => {
             const response = await axios.get(url)
             const data = await response.data;
             console.log(data);
-            setGenres(data.genres/*.forEach(item => {getMovies(`${movieGenre}with_genres=${item.id}&${apiKey}`)})*/)
+            setGenres(data.genres)
         } catch (error) {
             console.log(error)
         }
@@ -68,20 +67,6 @@ const Home = () => {
         getCover(getCoverList);
         
     }, []);
-
-    /*
-    useEffect(() => {
-
-        const getMoviesList = `${movieGenre}${apiKey}&language=pt-BR`
-        getMovies(getMoviesList);
-        
-    }, []);
-
-    useEffect(() => {
-        const getCoverList = `${baseUrl}popular?${apiKey}&language=pt-BR`;
-        getCover(getCoverList);
-    }, [])
-    */
 
     return (
         <div className='container'> 
