@@ -2,10 +2,26 @@
     margin-top: 5rem;
 }
 
+.container-cover {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
 .container-movie {
     display: flex;
     align-content: center;
-    gap: 1.4rem;
     margin: 0 1rem;
+    flex-direction: column;
 }
+
+.container-movie-genre {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.container-genres h2{
+    margin-bottom: 0.5rem;
+}
+
+
 
