@@ -1,18 +1,59 @@
 .movie-page {
-    margin-top: 7rem;
+    display: flex;
+    justify-content: flex-start;
+    /*margin-top: 5rem;*/
+    width: 100%;
 }
 
-.info-movie {
-    width: 70%;
-    height: auto;
+.movie {
+    display: flex;
+    width: 100%;
+    margin-top: 7rem;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.movie-folder {
+    display: flex;
+}
+
+
+.movie-folder img{
+    height: 80%;
+}
+
+
+.movie-info {
+    width: 50%;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info ul li {
+    color: #C0C0C0;
     margin-left: 1rem;
 }
 
-.info-movie .card-movie {
-    width: 100%;
-    align-items: flex-start;
+.movie-info h1:hover {
+    color: #dd0e15;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.info-movie .card-movie img {
-    width: 65%;
+.movie-info .sinopse {
+    margin-top: 0.5rem;
+    text-align: justify;
+    color: #D3D3D3;
+}
+
+.more-info {
+    margin-top: 2.5rem;
+}
+
+.more-info h2:hover{
+    color: #dd0e15;
+    cursor: pointer;
+    transition: 0.3s;
 }
