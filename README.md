@@ -7,8 +7,6 @@
 ## 💬 Sobre
 Projeto simples realizado no bootcamp da DIO (Digital Innovation One) mas abordando os vários fundamentos importantes para o frontend como, responsividade e posicionamento dos elementos.
 
-🌐 Click no link para acessar:  [diogobarroscode.github.io/Explorer-Project-NLW](https://diogobarroscode.github.io/netflixRecreatingInterface/)
-
 #
 ## 🚀 Tecnologias
 
