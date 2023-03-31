@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import CardMovie from '../components/card/CardMovie';
 import CoverMovie from '../components/cover/CoverMovies';
 
-const apiKey = "api_key=aa412de9cb6448a62e521ae48ef4817d";
-const baseUrl = "https://api.themoviedb.org/3/movie/";
-const genresList = "https://api.themoviedb.org/3/genre/movie/list?";
-const movieGenre = "https://api.themoviedb.org/3/discover/movie?";
+const apiKey = import.meta.env.VITE_API_KEY;
+const baseUrl = import.meta.env.VITE_BASE_URL;
+const genresList = import.meta.env.VITE_GENRE_LIST;
+const movieGenre = import.meta.env.VITE_MOVIE_GENRE;
 
 
 
