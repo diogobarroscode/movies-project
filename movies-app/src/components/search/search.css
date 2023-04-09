@@ -1,0 +1,36 @@
+.nav-box form {
+    display: flex;
+}
+.nav-box form input{
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    border: none;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    border:1px solid #000;
+}
+
+.nav-box form input {
+    padding: 0.2rem 0.8rem;
+    outline: 0;
+    border-radius: 10px;
+}
+.nav-box form button {
+    background-color: transparent;
+    border: none;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-box form button svg {
+    fill: #808080;
+    transition: .4s;
+}
+.nav-box form button svg:hover {
+    fill: #D3D3D3;
+}
