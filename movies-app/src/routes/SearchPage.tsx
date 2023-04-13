@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import CardMovie from '../components/card/CardMovie';
+import './SearchPage.css';
 
 
 const searchURL = import.meta.env.VITE_API_SEARCH;
@@ -37,13 +38,14 @@ const SearchPage = () => {
 
 
     return(
-        <div>
-            <div>Resultados para: {query}</div>
-        
-            <div className='container-movie-genre'>
-                {searchMovies?.map((movie: any) => <CardMovie key={movie.id} movie={movie} />)}
-            </div>
+        <div className='container-search'>
+            <div className='content-search'>
+                <div className='title-search'><h2>Resultados para: <span>{query}</span></h2></div>
 
+                <div className='container-movie-search'>
+                    {searchMovies?.map((movie: any) => <CardMovie key={movie.id} movie={movie} />)}
+                </div>
+            </div>
         </div>
 
     );

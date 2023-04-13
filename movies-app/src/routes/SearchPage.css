@@ -1,0 +1,23 @@
+
+.container-search {
+    margin-top: 7rem;
+}
+
+
+.title-search {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title-search span{
+    color: #e60000;
+}
+
+.container-movie-search {
+    display: flex;
+    gap: 1.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+}
+
