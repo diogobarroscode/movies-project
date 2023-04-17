@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './CoverMovie.css';
+import { Movie } from "../../types/Interfaces"
 
-const imgUrl = "https://image.tmdb.org/t/p/w1280/";
+interface Props {
+    movie: Movie;
+  }
 
-const CoverMovie = ({movie}) => {
+const imgUrl = import.meta.env.VITE_IMG_URL_LARGE;
+
+const CoverMovie = ({movie}:Props) => {
     return (
         <div className="cover-movie">
             {<Link to={`/movie/${movie.id}`}>
