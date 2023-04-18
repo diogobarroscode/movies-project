@@ -19,13 +19,16 @@ const Search = () => {
 
     return(
         <div className='nav-box'>
+        
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder='Buscar' 
             onChange={(e) => setSearch(e.target.value)} 
             value = {search}
             />
+
             <button type='submit'><FaSearch /></button>
         </form>
+        
     </div>
     )
 }

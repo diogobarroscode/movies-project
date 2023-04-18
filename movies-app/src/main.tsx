@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import Home from './routes/Home'
-import Movie from './routes/Movie'
-import SearchPage from './routes/SearchPage'
+import Home from './routes/home/Home'
+import Movie from './routes/movie/Movie'
+import SearchPage from './routes/search/SearchPage'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';

@@ -1,9 +1,8 @@
-import React from "react";
 import axios from 'axios';
 import {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import './Movie.css';
-import CoverMovie from "../components/cover/CoverMovies";
+
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const baseUrl = import.meta.env.VITE_BASE_URL;

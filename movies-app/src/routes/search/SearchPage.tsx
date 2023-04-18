@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import CardMovie from '../components/card/CardMovie';
+import CardMovie from '../../components/card/CardMovie';
 import './SearchPage.css';
-
 
 const searchURL = import.meta.env.VITE_API_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -14,7 +13,8 @@ const SearchPage = () => {
     const query = searchParams.get("q");
 
     const [searchMovies, setSearchMovies] = useState([]);
-
+    
+    
     const getSearchMovies = async (url: string) => {
 
         try {
@@ -29,11 +29,13 @@ const SearchPage = () => {
         
     };
 
-    useEffect(() => {
 
+    useEffect(() => {
+        
         const getSearchList = `${searchURL}${apiKey}&query=${query}&language=pt-BR`
         getSearchMovies(getSearchList);
         
+
     }, [query]);
 
 
