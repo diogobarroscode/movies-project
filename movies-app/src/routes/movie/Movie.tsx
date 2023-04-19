@@ -1,13 +1,8 @@
 import axios from 'axios';
+import { apiKey, baseUrl, imgUrlLarge, imgUrlMedium } from '../../services/Api';
 import {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import './Movie.css';
-
-
-const apiKey = import.meta.env.VITE_API_KEY;
-const baseUrl = import.meta.env.VITE_BASE_URL;
-const imgUrlSmall = import.meta.env.VITE_IMG_URL_SMALL;
-const imgUrlLarge = import.meta.env.VITE_IMG_URL_LARGE;
 
 
 const Movie = () => {
@@ -41,7 +36,7 @@ const Movie = () => {
 
            <div className="movie">
                 <div className="movie-folder">
-                    <img src={imgUrlSmall + movie.poster_path} alt={movie.title} />
+                    <img src={imgUrlMedium + movie.poster_path} alt={movie.title} />
                 </div>
                 <div className="movie-info">
                     <h1>{movie.title}</h1>

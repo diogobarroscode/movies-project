@@ -4,6 +4,7 @@ import CoverMovie from '../../components/cover/CoverMovies';
 import { Genre, moviesByGenreObject} from '../../types/Interfaces';
 import { getGenres, getMoviesByGenre, getCover} from '../../services/Api';
 import "./Home.css"
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -67,7 +68,9 @@ const Home = () => {
                 <div className='container-genres' key={genre.id}>
                   
                   <div className='genre-title'>
-                      <h2>{genre.name}</h2>
+                      {<Link to={`/genre/${genre.id}`}>
+                          <h2>{genre.name}</h2>
+                      </Link>}
                   </div>
 
                   <div className="container-movie-genre">
