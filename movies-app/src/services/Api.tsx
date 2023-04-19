@@ -1,10 +1,13 @@
 import axios from "axios";
 
-const apiKey = import.meta.env.VITE_API_KEY;
-const baseUrl = import.meta.env.VITE_BASE_URL;
-const genresList = import.meta.env.VITE_GENRE_LIST;
-const movieGenre = import.meta.env.VITE_MOVIE_GENRE;
-const searchURL = import.meta.env.VITE_API_SEARCH;
+export const apiKey = import.meta.env.VITE_API_KEY;
+export const baseUrl = import.meta.env.VITE_BASE_URL;
+export const genresList = import.meta.env.VITE_GENRE_LIST;
+export const movieGenre = import.meta.env.VITE_MOVIE_GENRE;
+export const searchURL = import.meta.env.VITE_API_SEARCH;
+export const imgUrlSmall = import.meta.env.VITE_IMG_URL_SMALL;
+export const imgUrlMedium = import.meta.env.VITE_IMG_URL_MEDIUM;
+export const imgUrlLarge = import.meta.env.VITE_IMG_URL_LARGE;
 
 
 export const getCover = async () => {
@@ -37,7 +40,7 @@ export const getGenres = async () => {
     }
 }
 
-export const getMoviesByGenre = async (genreId: number) => {
+export const getMoviesByGenre = async (genreId: number | string) => {
     try {
         const response = await axios.get(
             `${movieGenre}${apiKey}&with_genres=${genreId}&language=pt-BR`
