@@ -1,15 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { movieGenre, apiKey} from "../../services/Api";
+import { movieGenre, apiKey, getGenres} from "../../services/Api";
 import CardMovie from "../../components/card/CardMovie";
 import "./MoviesGenre.css"
 
 
 const MoviesGenre = () => {
 
-    const {id} = useParams();
+    const {genreId} = useParams();
     const [movies, setMovies] = useState([]);
+    const [genres, setGenres ] = useState([]);
 
 
     const getMovies = async (url: string) => {
@@ -26,22 +27,32 @@ const MoviesGenre = () => {
         
     
     };
-
-
+    
     useEffect(() => {
 
-        const getMovieByGenre = `${movieGenre}${apiKey}&with_genres=${id}&language=pt-BR`
+        const loadGenres = async () => {
+            const genreSel = await getGenres();
+            setGenres(genreSel);
+        }
+
+        const getMovieByGenre = `${movieGenre}${apiKey}&with_genres=${genreId}&language=pt-BR`
         getMovies(getMovieByGenre);
-              
+        
+
+        loadGenres();
     }, []);
-
-
 
     return (
         <div>
 
             <div>
-                {movies?.map((movie:any) => <CardMovie key={movie.id} movie={movie}/>)}
+                {genres?.map((genre:any) => (
+                    <h1 key={genre.id}>{genre.id == genreId && genre.name}</h1>
+                ))}
+            </div>
+
+            <div>{movies?.map((movie:any) => (
+                <CardMovie key={movie.id} movie={movie} />))}
             </div>
 
         </div>
