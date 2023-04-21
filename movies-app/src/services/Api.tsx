@@ -8,6 +8,7 @@ export const searchURL = import.meta.env.VITE_API_SEARCH;
 export const imgUrlSmall = import.meta.env.VITE_IMG_URL_SMALL;
 export const imgUrlMedium = import.meta.env.VITE_IMG_URL_MEDIUM;
 export const imgUrlLarge = import.meta.env.VITE_IMG_URL_LARGE;
+export const imgUrlFull = import.meta.env.VITE_IMG_URL_FULL;
 
 
 export const getCover = async () => {

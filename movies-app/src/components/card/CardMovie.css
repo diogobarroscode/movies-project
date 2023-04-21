@@ -9,6 +9,7 @@
 
 .card-movie img {
     width: 12rem;
+    border-radius: 8px;
 }
 
 .card-movie h2 {

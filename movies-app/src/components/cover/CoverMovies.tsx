@@ -6,7 +6,7 @@ interface Props {
     movie: Movie;
   }
 
-const imgUrl = import.meta.env.VITE_IMG_URL_LARGE;
+const imgUrl = import.meta.env.VITE_IMG_URL_FULL;
 
 const CoverMovie = ({movie}:Props) => {
     return (
