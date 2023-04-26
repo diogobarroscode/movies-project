@@ -6,6 +6,13 @@ import { getGenres, getMoviesByGenre, getCover} from '../../services/Api';
 import "./Home.css"
 import { Link } from 'react-router-dom';
 
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import "swiper/css/effect-fade"
+
 
 const Home = () => {
 
@@ -57,9 +64,25 @@ const Home = () => {
       return (
         <div className='container'>
 
-          <div className='container-cover'>
-                {cover?.map((movie:any) => <CoverMovie key={movie.id} movie={movie}/>)}
-          </div>
+          <Swiper modules={[EffectFade, Navigation, Pagination, Autoplay]}
+            speed={500}
+            effect= {"fade"}
+            slidesPerView={1} loop 
+            navigation
+            pagination
+            autoplay={{
+              delay: 7000,
+              disableOnInteraction: false,
+            }}
+          >
+
+              <div className='container-cover'>
+
+                    {cover?.map((movie:any) => <SwiperSlide><CoverMovie key={movie.id} movie={movie}/></SwiperSlide>)}
+
+              </div>
+
+          </Swiper>
 
           <div className="container-movie">
             
@@ -72,14 +95,24 @@ const Home = () => {
                           <h2>{genre.name}</h2>
                       </Link>}
                   </div>
+  
+                    <div className="container-movie-genre">
 
-                  <div className="container-movie-genre">
-                    
-                        {moviesByGenre[genre.id]?.map((movie) => (
-                            <CardMovie key={movie.id} movie={movie} />
-                        ))}
-
-                  </div>
+                      <Swiper slidesPerView={1} spaceBetween={10} loop modules={[Navigation]} navigation 
+                        breakpoints={{
+                          320: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                          }
+                        }}
+                      
+                      >
+                            {moviesByGenre[genre.id]?.map((movie) => (
+                                <SwiperSlide><CardMovie key={movie.id} movie={movie} /></SwiperSlide>
+                            ))}
+                      </Swiper>  
+                      
+                    </div>
 
                 </div>
               ) : (
