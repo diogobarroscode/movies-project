@@ -8,7 +8,7 @@
 }
 
 .card-movie img {
-    width: 12rem;
+    max-width: 12rem;
     border-radius: 8px;
 }
 
