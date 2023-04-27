@@ -43,18 +43,19 @@ const MoviesGenre = () => {
     }, []);
 
     return (
-        <div>
+        <div className='container-movie-genre-page'>
+            <div className='content-movie-genre'>
+                <div className='title-movie-genre'>
+                    {genres?.map((genre:any) => (
+                        <h2 key={genre.id}>{genre.id == genreId && genre.name}</h2>
+                    ))}
+                </div>
 
-            <div>
-                {genres?.map((genre:any) => (
-                    <h1 key={genre.id}>{genre.id == genreId && genre.name}</h1>
-                ))}
-            </div>
-
-            <div>{movies?.map((movie:any) => (
-                <CardMovie key={movie.id} movie={movie} />))}
-            </div>
-
+                <div className='content-movie-genre-list'>
+                    {movies?.map((movie:any) => (
+                    <CardMovie key={movie.id} movie={movie} />))}
+                </div>
+            </div>           
         </div>
     
     )

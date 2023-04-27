@@ -1,0 +1,17 @@
+
+.container-movie-genre-page {
+    margin-top: 6rem;
+}
+
+.title-movie-genre {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-movie-genre-list {
+    display: flex;
+    gap: 1.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+}
