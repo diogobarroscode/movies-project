@@ -9,6 +9,7 @@
 body {
     background-color: #181818;
     max-width: 1903px;
+    margin: 0 auto;
 }
 
 p {
