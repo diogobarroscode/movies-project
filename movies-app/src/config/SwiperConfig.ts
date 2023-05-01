@@ -20,7 +20,8 @@ export const swiperConfigSlide: SwiperConfig = {
     navigation: true,
     pagination: false,
     autoplay: {
-        delay: 7000,
+        delay: 10000,
+        disableOnInteraction: false,
     }
 }
 
