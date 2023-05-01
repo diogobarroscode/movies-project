@@ -18,7 +18,7 @@ const Search = () => {
     };
 
     return(
-        <div className='nav-box'>
+        <div className='nav-form'>
         
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder='Buscar' 

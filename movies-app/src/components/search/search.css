@@ -1,22 +1,27 @@
-.nav-box form {
+.nav-form {
+    width: 25%;
+}
+
+.nav-form form {
     display: flex;
 }
 
 form {
     background-color: #fff;
-    border-radius: 10px;
-    border:1px solid #000;
+    border-radius: 7px;
+    border: 2px solid #c8c8c9;
 }
 
-.nav-box form input {
-    padding: 0.2rem 0.8rem;
+.nav-form form input {
+    padding: 0.3rem 1rem;
     outline: 0;
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     font-size: 1rem;
     color: #000;
+    width: 100%;
 }
-.nav-box form button {
+.nav-form form button {
     background-color: transparent;
     border: none;
     padding: 0.3rem;
@@ -25,10 +30,46 @@ form {
     align-items: center;
     cursor: pointer;
 }
-.nav-box form button svg {
+.nav-form form button svg {
     fill: #808080;
     transition: .4s;
 }
-.nav-box form button svg:hover {
+.nav-form form button svg:hover {
     fill: #dd0e15;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .nav-form {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .nav-form {
+        display: none;
+    }
+
+    .search-mobile svg {
+        height: 2rem;
+        width: 1.5rem;
+        fill: #c8c8c9;
+    }
+
+}
+
+@media screen and (min-width: 841px) {
+    .search-mobile {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 441px) {
+    .search-mobile svg {
+        height: 1.6rem;
+        width: 1.2rem;
+    }
+}
+
+
