@@ -60,15 +60,15 @@ const Home = () => {
       return (
         <div className='container'>
 
-          
-          <Swiper {...swiperConfigSlide}>
+          <div className='container-cover'>
+            <Swiper {...swiperConfigSlide}>
 
-              <div className='container-cover'>
-                {cover?.map((movie:any) => <SwiperSlide><CoverMovie key={movie.id} movie={movie}/></SwiperSlide>)}
-              </div>   
                 
-          </Swiper>
-          
+                  {cover?.map((movie:any) => <SwiperSlide><CoverMovie key={movie.id} movie={movie}/></SwiperSlide>)}
+                 
+                  
+            </Swiper>
+          </div>
            
           
 

@@ -4,20 +4,26 @@
 }
 */
 
+:root {
+    --swiper-navigation-size-cover: 2.5rem;
+    --swiper-navigation-size-carousel: 2rem;
+    --swiper-theme-color: white !important;
+}
+
 .container-cover {
-    display: flex;
+    /* display: flex; */
     /*margin-bottom: 2rem;*/
 }
 
 .container-movie {
-    display: flex;
+    /* display: flex;
     align-content: center;
     margin: 0 1rem;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .container-movie-genre {
-    display: flex;
+    /* display: flex; */
     /*gap: 1.4rem;*/
 }
 
@@ -29,11 +35,48 @@
     margin-bottom: 0.5rem;
 }
 
+.container-cover .swiper-button-prev,
+.container-cover .swiper-button-next {
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 2.8rem 1.5rem;
+    
+}
+
+.container-cover .swiper-button-prev::after,
+.container-cover .swiper-button-next::after {
+    font-size: var(--swiper-navigation-size-cover) !important;
+}
+
+.container-movie-genre .swiper-button-prev::after,
+.container-movie-genre .swiper-button-next::after {
+    font-size: var(--swiper-navigation-size-carousel) !important;
+}
+
+.container-movie-genre .swiper-button-prev,
+.container-movie-genre .swiper-button-next {
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 2.5rem 1.3rem;
+    
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: red !important;
+    background-color: rgba(255, 255, 255, 0.3)
+}
+
+
 
 @media screen and (min-width: 320px) {
 
     .container {
-        margin-top: 3.3rem;
+        margin-top: 2.7rem;
     }
     
     .card-movie img {
@@ -128,6 +171,39 @@
     }
 }
 
+@media screen and (max-width: 999px) {
+    .swiper-button-prev {
+        display: none !important;
+    }
+    .swiper-button-next {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        margin-top: 0rem;
+    }
+
+    .container-cover .swiper-button-prev, 
+    .container-cover .swiper-button-next {
+        top: 42%;
+    }
+
+    .container-movie-genre .swiper-button-prev, 
+    .container-movie-genre .swiper-button-next {
+        top: 42%;
+    }
+
+    .container-movie-genre .swiper-button-prev {
+        left: 0.3rem;
+    }
+    .container-movie-genre .swiper-button-next {
+        right: 0.3rem;
+    }
+}
+
+
 @media screen and (min-width: 1060px) {
     .card-movie img {
         width: 83%;
@@ -137,10 +213,6 @@
 @media screen and (min-width: 1100px) {
     .card-movie img {
         width: 85%;
-    }
-
-    .container {
-        margin-top: 0rem;
     }
 }
 
