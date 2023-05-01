@@ -9,19 +9,32 @@
     margin: 0 auto;
     z-index: 9;
     background: rgb(0, 0, 0, 0.8);
-    padding: 0 2.5vw;
+    /*padding: 0 1.5vw;*/
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.navbar .logo {
+    position: absolute;
 }
 
 .nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5vw;
+}
+
+/*.nav-box {
     width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     margin-left: auto;
-}
+}*/
 
 .navbar h1 {
     text-transform: uppercase;
@@ -35,14 +48,47 @@
     color: #7c070b;
 }
 
+.menu svg {
+    width: 2em;
+    height: 2em;
+    stroke: #c8c8c9;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menu svg:hover {
+    stroke: white;
+}
+
 @media screen and (min-width: 320px) {
     .navbar{
-        height: 3.3rem;
+        height: 2.7rem;
+    }
+
+}
+
+@media screen and (max-width: 441px) {
+
+    .navbar .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu svg {
+        width: 1.5em;
+        height: 1.5em;
     }
 }
+
 
 @media screen and (min-width: 500px) {
     .navbar{
         height: 4rem;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .navbar{
+        position: absolute;
+    }
+}
+
