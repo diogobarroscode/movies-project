@@ -31,8 +31,13 @@
     margin-top: 2rem;
 }
 
+.genre-title h2:hover {
+    color: #dd0e15;
+}
+
 .container-genres h2{
     margin-bottom: 0.5rem;
+    transition: 0.3s;
 }
 
 .container-cover .swiper-button-prev,
