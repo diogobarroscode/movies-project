@@ -17,13 +17,14 @@
 
 .movie-info-cover {
     position: absolute;
-    top: 50%;
+    top: 53%;
+    margin-left: 0;
     padding-bottom: 1rem;
-    max-width: 50%;
-    margin-left: 0.7rem;
-    border-radius: 7px;
+    max-width: 52%;
     z-index: 2;
 }
+
+    
 
 .movie-info-cover h1 {
     padding: 0.5rem 1rem 0rem;
@@ -126,4 +127,147 @@
 .movie-info-cover .more svg{
     fill: #ffffff;
     margin-right: 0.4em;
+}
+
+
+@media screen and (max-width: 999px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 57%;
+        max-width: 63%;
+    }
+
+    .movie-info-cover h1 {
+        font-size: 2rem;
+    }
+    .movie-info-cover span {
+        font-size: 1rem;
+    }
+    .movie-info-cover p {
+        font-size: 1rem;
+
+        max-height: calc(3 * 1.3em);
+        -webkit-line-clamp: 3;
+    }
+
+    .movie-info-cover button {
+        padding: 0.6rem 0.9rem;
+        margin: 1rem 0rem 0rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 52%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 52%;
+        max-width: 65%;
+    }
+
+    .movie-info-cover h1 {
+        font-size: 1.7rem;
+    }
+    .movie-info-cover span {
+        font-size: 0.9rem;
+    }
+    .movie-info-cover p {
+        font-size: 0.9rem;
+
+        max-height: calc(2 * 1.4em);
+        -webkit-line-clamp: 2;
+    }
+
+    .movie-info-cover button {
+        padding: 0.5rem 0.9rem;
+        margin: 1rem 0rem 0rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 52%;
+        max-width: 65%;
+    }
+
+    .movie-info-cover h1 {
+        font-size: 1.5rem;
+    }
+    .movie-info-cover span {
+        font-size: 0.8rem;
+    }
+    .movie-info-cover p {
+        font-size: 0.8rem;
+
+        max-height: calc(2 * 1.4em);
+        -webkit-line-clamp: 2;
+    }
+
+    .movie-info-cover button {
+        padding: 0.5rem 0.9rem;
+        margin: 1rem 0rem 0rem 1rem;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 49%;
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .movie-info-cover {
+        position: absolute;
+        top: 52%;
+        max-width: 70%;
+    }
+    .movie-info-cover h1 {
+        font-size: 1.3rem;
+    }
+    .movie-info-cover span {
+        font-size: 0.7rem;
+    }
+    .movie-info-cover p {
+        display: none;
+    }
+
+    .movie-info-cover button {
+        padding: 0.5rem 0.9rem;
+        margin: 0.6rem 0rem 0rem 1rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .movie-info-cover {
+        position: absolute;
+        max-width: 80%;
+    }
+    .movie-info-cover h1 {
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+    }
+    .movie-info-cover span {
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+    }
+    .movie-info-cover button {
+        padding: 0.4rem 0.9rem;
+        margin: 0.6rem 0rem 0rem 0.6rem;
+        font-size: 0.6rem;
+    }
 }
